@@ -1,0 +1,8 @@
+0>IAddObjectForm.cs(2,22): Error CS0234 : Тип или имя пространства имен "Forms" не существует в пространстве имен "System.Windows" (возможно, отсутствует ссылка на сборку).
+0>IAddObjectForm.cs(3,7): Error CS0246 : Не удалось найти тип или имя пространства имен "StarSystemLibrary" (возможно, отсутствует директива using или ссылка на сборку).
+0>MainForm.cs(3,22): Error CS0234 : Тип или имя пространства имен "Forms" не существует в пространстве имен "System.Windows" (возможно, отсутствует ссылка на сборку).
+0>MainForm.cs(4,7): Error CS0246 : Не удалось найти тип или имя пространства имен "StarSystemLibrary" (возможно, отсутствует директива using или ссылка на сборку).
+0>IAddObjectForm.cs(7,42): Error CS0246 : Не удалось найти тип или имя пространства имен "Form" (возможно, отсутствует директива using или ссылка на сборку).
+0>MainForm.cs(8,37): Error CS0246 : Не удалось найти тип или имя пространства имен "Form" (возможно, отсутствует директива using или ссылка на сборку).
+0>------- Finished building project: Coursework_Nikita. Succeeded: False. Errors: 6. Warnings: 0
+Build completed in 00:00:01.771
