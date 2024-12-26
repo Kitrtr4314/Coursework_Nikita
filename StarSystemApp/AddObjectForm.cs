@@ -1,110 +1,72 @@
 using System;
 using System.Windows.Forms;
-using StarSystemLibrary;
 
 namespace StarSystemApp
 {
     public partial class AddObjectForm : Form
     {
-        public SpaceObject CreatedObject { get; private set; }
-
         public AddObjectForm()
         {
             InitializeComponent();
-            UpdateControls();
+
+            // Привязка событий для радиокнопок
+            rbStar.CheckedChanged += RadioButton_CheckedChanged;
+            rbPlanet.CheckedChanged += RadioButton_CheckedChanged;
+            rbMoon.CheckedChanged += RadioButton_CheckedChanged;
+
+            // Инициализация состояния интерфейса
+            UpdateFormState();
         }
 
-        // Метод обновления доступных контролов в зависимости от выбранного типа объекта
-        private void UpdateControls()
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            UpdateFormState();
+        }
+
+        private void UpdateFormState()
+        {
+            // Установка видимости специфичных элементов
+            nudLuminosity.Visible = rbStar.Checked;
+            nudMoonsCount.Visible = rbPlanet.Checked;
+            txtPlanetName.Visible = rbMoon.Checked;
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            // Проверка заполненности обязательных полей
+            if (string.IsNullOrWhiteSpace(txtMass.Text) ||
+                string.IsNullOrWhiteSpace(txtDiameter.Text) ||
+                string.IsNullOrWhiteSpace(txtAge.Text))
+            {
+                MessageBox.Show("Заполните все обязательные поля.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Создание объекта в зависимости от выбора пользователя
             if (rbStar.Checked)
             {
-                nudLuminosity.Enabled = true;
-                nudMoonsCount.Enabled = false;
-                txtPlanetName.Enabled = false;
+                // Логика для создания звезды
+                MessageBox.Show("Звезда добавлена.");
             }
             else if (rbPlanet.Checked)
             {
-                nudLuminosity.Enabled = false;
-                nudMoonsCount.Enabled = true;
-                txtPlanetName.Enabled = false;
+                // Логика для создания планеты
+                MessageBox.Show("Планета добавлена.");
             }
             else if (rbMoon.Checked)
             {
-                nudLuminosity.Enabled = false;
-                nudMoonsCount.Enabled = false;
-                txtPlanetName.Enabled = true;
+                // Логика для создания луны
+                MessageBox.Show("Луна добавлена.");
             }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
-        // Обработчик переключения радиокнопок
-        private void RadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateControls();
-        }
-
-        // Обработчик создания объекта
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Общие свойства
-                var mass = float.Parse(txtMass.Text);
-                var diameter = float.Parse(txtDiameter.Text);
-                var age = int.Parse(txtAge.Text);
-
-                if (rbStar.Checked)
-                {
-                    // Создание объекта типа Star
-                    var luminosity = (float)nudLuminosity.Value;
-                    CreatedObject = new Star
-                    {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        Luminosity = luminosity
-                    };
-                }
-                else if (rbPlanet.Checked)
-                {
-                    // Создание объекта типа Planet
-                    var moonsCount = (int)nudMoonsCount.Value;
-                    CreatedObject = new Planet
-                    {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        MoonsCount = moonsCount
-                    };
-                }
-                else if (rbMoon.Checked)
-                {
-                    // Создание объекта типа Moon
-                    var planetName = txtPlanetName.Text;
-                    CreatedObject = new Moon
-                    {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        PlanetName = planetName
-                    };
-                }
-
-                DialogResult = DialogResult.OK;
-                Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка ввода данных: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Обработчик отмены создания объекта
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            CreatedObject = null;
-            DialogResult = DialogResult.Cancel;
-            Close();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }
