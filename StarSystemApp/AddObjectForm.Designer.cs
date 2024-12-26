@@ -35,20 +35,20 @@ namespace StarSystemApp
             this.rbMoon = new System.Windows.Forms.RadioButton();
             this.rbPlanet = new System.Windows.Forms.RadioButton();
             this.rbStar = new System.Windows.Forms.RadioButton();
-            this.textboxMass = new System.Windows.Forms.TextBox();
-            this.TextBoxDiametr = new System.Windows.Forms.TextBox();
-            this.TextBoxAge = new System.Windows.Forms.TextBox();
             this.TxtLum = new System.Windows.Forms.TextBox();
             this.txtMoons = new System.Windows.Forms.TextBox();
             this.txtPlanet = new System.Windows.Forms.TextBox();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.nudLuminosity = new System.Windows.Forms.NumericUpDown();
             this.nudMoonsCount = new System.Windows.Forms.NumericUpDown();
             this.txtPlanetName = new System.Windows.Forms.TextBox();
-            this.txtMass = new System.Windows.Forms.TextBox();
+            this.textboxMass = new System.Windows.Forms.TextBox();
+            this.TextBoxAge = new System.Windows.Forms.TextBox();
+            this.TextBoxDiametr = new System.Windows.Forms.TextBox();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtDiameter = new System.Windows.Forms.TextBox();
+            this.txtMass = new System.Windows.Forms.TextBox();
             this.GroupBoxObjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudLuminosity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMoonsCount)).BeginInit();
@@ -75,7 +75,6 @@ namespace StarSystemApp
             this.rbMoon.TabStop = true;
             this.rbMoon.Text = "Луна";
             this.rbMoon.UseVisualStyleBackColor = true;
-            this.rbMoon.CheckedChanged += new System.EventHandler(this.RadioButtonMoon_CheckedChanged);
             // 
             // rbPlanet
             // 
@@ -96,33 +95,6 @@ namespace StarSystemApp
             this.rbStar.TabStop = true;
             this.rbStar.Text = "Звезда";
             this.rbStar.UseVisualStyleBackColor = true;
-            this.rbStar.CheckedChanged += new System.EventHandler(this.ButtonStar_CheckedChanged);
-            // 
-            // textboxMass
-            // 
-            this.textboxMass.Location = new System.Drawing.Point(195, 44);
-            this.textboxMass.Name = "textboxMass";
-            this.textboxMass.Size = new System.Drawing.Size(120, 22);
-            this.textboxMass.TabIndex = 1;
-            this.textboxMass.Text = "Масса:";
-            this.textboxMass.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // TextBoxDiametr
-            // 
-            this.TextBoxDiametr.Location = new System.Drawing.Point(195, 88);
-            this.TextBoxDiametr.Name = "TextBoxDiametr";
-            this.TextBoxDiametr.Size = new System.Drawing.Size(120, 22);
-            this.TextBoxDiametr.TabIndex = 2;
-            this.TextBoxDiametr.Text = "Диаметр:";
-            this.TextBoxDiametr.TextChanged += new System.EventHandler(this.TextBoxDiametr_TextChanged);
-            // 
-            // TextBoxAge
-            // 
-            this.TextBoxAge.Location = new System.Drawing.Point(195, 133);
-            this.TextBoxAge.Name = "TextBoxAge";
-            this.TextBoxAge.Size = new System.Drawing.Size(120, 22);
-            this.TextBoxAge.TabIndex = 3;
-            this.TextBoxAge.Text = "Возраст:";
             // 
             // TxtLum
             // 
@@ -148,26 +120,6 @@ namespace StarSystemApp
             this.txtPlanet.TabIndex = 6;
             this.txtPlanet.Text = "Планета:";
             // 
-            // btnOk
-            // 
-            this.btnOk.Location = new System.Drawing.Point(33, 447);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(100, 30);
-            this.btnOk.TabIndex = 7;
-            this.btnOk.Text = "Создать";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(309, 447);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 30);
-            this.btnCancel.TabIndex = 8;
-            this.btnCancel.Text = "Отмена";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // nudLuminosity
             // 
             this.nudLuminosity.Location = new System.Drawing.Point(232, 244);
@@ -189,12 +141,48 @@ namespace StarSystemApp
             this.txtPlanetName.Size = new System.Drawing.Size(120, 22);
             this.txtPlanetName.TabIndex = 11;
             // 
-            // txtMass
+            // textboxMass
             // 
-            this.txtMass.Location = new System.Drawing.Point(346, 44);
-            this.txtMass.Name = "txtMass";
-            this.txtMass.Size = new System.Drawing.Size(82, 22);
-            this.txtMass.TabIndex = 12;
+            this.textboxMass.Location = new System.Drawing.Point(195, 44);
+            this.textboxMass.Name = "textboxMass";
+            this.textboxMass.Size = new System.Drawing.Size(120, 22);
+            this.textboxMass.TabIndex = 1;
+            this.textboxMass.Text = "Масса:";
+            // 
+            // TextBoxAge
+            // 
+            this.TextBoxAge.Location = new System.Drawing.Point(195, 133);
+            this.TextBoxAge.Name = "TextBoxAge";
+            this.TextBoxAge.Size = new System.Drawing.Size(120, 22);
+            this.TextBoxAge.TabIndex = 3;
+            this.TextBoxAge.Text = "Возраст:";
+            // 
+            // TextBoxDiametr
+            // 
+            this.TextBoxDiametr.Location = new System.Drawing.Point(195, 88);
+            this.TextBoxDiametr.Name = "TextBoxDiametr";
+            this.TextBoxDiametr.Size = new System.Drawing.Size(120, 22);
+            this.TextBoxDiametr.TabIndex = 2;
+            this.TextBoxDiametr.Text = "Диаметр:";
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(33, 447);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(100, 30);
+            this.btnOk.TabIndex = 7;
+            this.btnOk.Text = "Создать";
+            this.btnOk.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(309, 447);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 30);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "Отмена";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtAge
             // 
@@ -210,10 +198,18 @@ namespace StarSystemApp
             this.txtDiameter.Size = new System.Drawing.Size(82, 22);
             this.txtDiameter.TabIndex = 14;
             // 
+            // txtMass
+            // 
+            this.txtMass.Location = new System.Drawing.Point(346, 44);
+            this.txtMass.Name = "txtMass";
+            this.txtMass.Size = new System.Drawing.Size(82, 22);
+            this.txtMass.TabIndex = 12;
+            // 
             // AddObjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(450, 499);
             this.Controls.Add(this.txtDiameter);
             this.Controls.Add(this.txtAge);
@@ -230,8 +226,8 @@ namespace StarSystemApp
             this.Controls.Add(this.TextBoxDiametr);
             this.Controls.Add(this.textboxMass);
             this.Controls.Add(this.GroupBoxObjects);
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "AddObjectForm";
-            this.Text = "AddObjectForm";
             this.GroupBoxObjects.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudLuminosity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMoonsCount)).EndInit();

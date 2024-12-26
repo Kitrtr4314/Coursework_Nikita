@@ -31,24 +31,13 @@ namespace StarSystemApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListBoxObject = new System.Windows.Forms.ListBox();
             this.btnAddObject = new System.Windows.Forms.Button();
             this.btnRemoveObject = new System.Windows.Forms.Button();
             this.btnViewInfo = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.ObjectLabel = new System.Windows.Forms.Label();
+            this.ListBoxObject = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // ListBoxObject
-            // 
-            this.ListBoxObject.FormattingEnabled = true;
-            this.ListBoxObject.ItemHeight = 16;
-            this.ListBoxObject.Items.AddRange(new object[] { "Список объектов" });
-            this.ListBoxObject.Location = new System.Drawing.Point(12, 217);
-            this.ListBoxObject.Name = "ListBoxObject";
-            this.ListBoxObject.Size = new System.Drawing.Size(200, 36);
-            this.ListBoxObject.TabIndex = 2;
-            this.ListBoxObject.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnAddObject
             // 
@@ -58,7 +47,7 @@ namespace StarSystemApp
             this.btnAddObject.TabIndex = 3;
             this.btnAddObject.Text = "Добавить объект";
             this.btnAddObject.UseVisualStyleBackColor = true;
-            this.btnAddObject.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddObject.Click += new System.EventHandler(this.btnAddObject_Click);
             // 
             // btnRemoveObject
             // 
@@ -68,7 +57,7 @@ namespace StarSystemApp
             this.btnRemoveObject.TabIndex = 4;
             this.btnRemoveObject.Text = "Удалить объект";
             this.btnRemoveObject.UseVisualStyleBackColor = true;
-            this.btnRemoveObject.Click += new System.EventHandler(this.DeleteObject_Click);
+            this.btnRemoveObject.Click += new System.EventHandler(this.btnRemoveObject_Click);
             // 
             // btnViewInfo
             // 
@@ -96,10 +85,22 @@ namespace StarSystemApp
             this.ObjectLabel.TabIndex = 7;
             this.ObjectLabel.Text = "Информация ";
             // 
+            // ListBoxObject
+            // 
+            this.ListBoxObject.FormattingEnabled = true;
+            this.ListBoxObject.ItemHeight = 16;
+            this.ListBoxObject.Items.AddRange(new object[] { "Список объектов" });
+            this.ListBoxObject.Location = new System.Drawing.Point(12, 217);
+            this.ListBoxObject.Name = "ListBoxObject";
+            this.ListBoxObject.Size = new System.Drawing.Size(200, 36);
+            this.ListBoxObject.TabIndex = 2;
+            this.ListBoxObject.SelectedIndexChanged += new System.EventHandler(this.ListBoxObject_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(450, 499);
             this.Controls.Add(this.ObjectLabel);
             this.Controls.Add(this.btnSort);
@@ -107,17 +108,17 @@ namespace StarSystemApp
             this.Controls.Add(this.btnRemoveObject);
             this.Controls.Add(this.btnAddObject);
             this.Controls.Add(this.ListBoxObject);
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "MainForm";
-            this.Text = "MainForm";
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.ListBox ListBoxObject;
 
         private System.Windows.Forms.Button btnRemoveObject;
         private System.Windows.Forms.Button btnViewInfo;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Label ObjectLabel;
-
-        private System.Windows.Forms.ListBox ListBoxObject;
 
         private System.Windows.Forms.Button btnAddObject;
 

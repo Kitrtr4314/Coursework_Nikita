@@ -27,7 +27,7 @@ namespace StarSystemApp
 
         private void btnRemoveObject_Click(object sender, EventArgs e)
         {
-            if (listBoxObjects.SelectedItem is SpaceObject selectedObject)
+            if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
             {
                 starSystem.RemoveSpaceObject(selectedObject);
                 UpdateObjectList();
@@ -40,7 +40,7 @@ namespace StarSystemApp
 
         private void btnViewInfo_Click(object sender, EventArgs e)
         {
-            if (listBoxObjects.SelectedItem is SpaceObject selectedObject)
+            if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
             {
                 MessageBox.Show(selectedObject.GetInfo(), "Информация об объекте", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -58,11 +58,16 @@ namespace StarSystemApp
 
         private void UpdateObjectList()
         {
-            listBoxObjects.Items.Clear();
+            ListBoxObject.Items.Clear();
             foreach (var obj in starSystem.GetAllSpaceObjects())
             {
-                listBoxObjects.Items.Add(obj);
+                ListBoxObject.Items.Add(obj);
             }
+        }
+
+        private void ListBoxObject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
