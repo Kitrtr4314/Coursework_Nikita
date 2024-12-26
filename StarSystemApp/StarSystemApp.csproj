@@ -5,11 +5,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{8FC18752-1F9D-4E78-8D4E-3895CC4E9C1A}</ProjectGuid>
+        <ProjectGuid>{D39FC3A4-E515-4EC1-A64F-DE7D58EB2E05}</ProjectGuid>
         <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Coursework_Nikita</RootNamespace>
-        <AssemblyName>Coursework_Nikita</AssemblyName>
+        <RootNamespace>StarSystemApp</RootNamespace>
+        <AssemblyName>StarSystemApp</AssemblyName>
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,6 +37,8 @@
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Drawing.Design" />
         <Reference Include="System.Windows.Forms" />
         <Reference Include="System.Xml"/>
     </ItemGroup>
@@ -53,14 +55,11 @@
         <Compile Include="MainForm.Designer.cs">
           <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="Program.cs" />
+        <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
-      <Content Include="to_do.txt" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="StarSystemLibrary\StarSystemLibrary.csproj">
+      <ProjectReference Include="..\StarSystemLibrary\StarSystemLibrary.csproj">
         <Project>{1a00e855-7d52-4767-a1b8-f6e34b233088}</Project>
         <Name>StarSystemLibrary</Name>
       </ProjectReference>

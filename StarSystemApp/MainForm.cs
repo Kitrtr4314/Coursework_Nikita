@@ -1,6 +1,6 @@
 using System.Windows.Forms;
 
-namespace Coursework_Nikita
+namespace StarSystemApp
 {
     public partial class MainForm : Form
     {

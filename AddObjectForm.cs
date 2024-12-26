@@ -2,9 +2,9 @@ using System.Windows.Forms;
 
 namespace Coursework_Nikita
 {
-    public partial class MainForm : Form
+    public partial class AddObjectForm : Form
     {
-        public MainForm()
+        public AddObjectForm()
         {
             InitializeComponent();
         }
