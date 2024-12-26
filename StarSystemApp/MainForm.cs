@@ -20,16 +20,16 @@ namespace StarSystemApp
             if (addObjectForm.ShowDialog() == DialogResult.OK)
             {
                 var newObject = addObjectForm.CreatedObject;
-                starSystem.AddObject(newObject);
+                starSystem.AddSpaceObject(newObject);
                 UpdateObjectList();
             }
         }
 
         private void btnRemoveObject_Click(object sender, EventArgs e)
         {
-            if (listBoxObjects.SelectedItem is CelestialObject selectedObject)
+            if (listBoxObjects.SelectedItem is SpaceObject selectedObject)
             {
-                starSystem.RemoveObject(selectedObject);
+                starSystem.RemoveSpaceObject(selectedObject);
                 UpdateObjectList();
             }
             else
@@ -40,7 +40,7 @@ namespace StarSystemApp
 
         private void btnViewInfo_Click(object sender, EventArgs e)
         {
-            if (listBoxObjects.SelectedItem is CelestialObject selectedObject)
+            if (listBoxObjects.SelectedItem is SpaceObject selectedObject)
             {
                 MessageBox.Show(selectedObject.GetInfo(), "Информация об объекте", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -52,14 +52,14 @@ namespace StarSystemApp
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            starSystem.SortByMass();
+            starSystem.SortSpaceObjects(obj => obj.Mass);
             UpdateObjectList();
         }
 
         private void UpdateObjectList()
         {
             listBoxObjects.Items.Clear();
-            foreach (var obj in starSystem.GetObjects())
+            foreach (var obj in starSystem.GetAllSpaceObjects())
             {
                 listBoxObjects.Items.Add(obj);
             }
