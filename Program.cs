@@ -1,9 +1,16 @@
-﻿namespace Coursework_Nikita
+﻿using System;
+using System.Windows.Forms;
+
+namespace Coursework_Nikita
 {
-    internal class Program
+    static class Program
     {
-        public static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
         }
     }
 }
