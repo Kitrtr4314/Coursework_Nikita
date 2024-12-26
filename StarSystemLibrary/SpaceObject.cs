@@ -1,6 +1,6 @@
 using System;
 
-namespace Coursework_Nikita
+namespace StarSystemLibrary
 {
     /// <summary>
     /// Абстрактный класс, представляющий объект космической системы.

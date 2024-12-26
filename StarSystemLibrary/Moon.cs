@@ -1,24 +1,24 @@
 using System;
 
-namespace Coursework_Nikita
+namespace StarSystemLibrary
 {
     /// <summary>
-    /// Класс, представляющий звезду.
+    /// Класс, представляющий луну.
     /// </summary>
-    public class Star : SpaceObject
+    public class Moon : SpaceObject
     {
         public override float Mass { get; set; }
         public override float EquatorialDiameter { get; set; }
         public override int Age { get; set; }
 
         /// <summary>
-        /// Светимость звезды (в солнечных светимостях).
+        /// Название планеты, вокруг которой вращается луна.
         /// </summary>
-        public float Luminosity { get; set; }
+        public string PlanetName { get; set; }
 
         public override string GetInfo()
         {
-            return base.GetInfo() + $", Светимость: {Luminosity} L☉";
+            return base.GetInfo() + $", Орбита вокруг планеты: {PlanetName}";
         }
 
         public override void UpdateProperties(float mass, float diameter, int age)

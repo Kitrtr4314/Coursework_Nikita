@@ -1,6 +1,6 @@
 using System;
 
-namespace Coursework_Nikita
+namespace StarSystemLibrary
 {
     /// <summary>
     /// Класс, представляющий планету.

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Coursework_Nikita
+namespace StarSystemLibrary
 {
     /// <summary>
     /// Класс, представляющий звёздную систему.
