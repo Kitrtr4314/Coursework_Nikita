@@ -12,11 +12,18 @@ namespace StarSystemApp
         public MainForm()
         {
             InitializeComponent();
+
+            // Привязка обработчиков событий
+            AddObject.Click += AddObject_Click;
+            DeleteObject.Click += DeleteObject_Click;
+            ShowInfo.Click += ShowInfo_Click;
+            Sort.Click += Sort_Click;
+
+            // Обновление списка
             UpdateListBox();
         }
 
-        // Обработчик события добавления объекта
-        private void button1_Click(object sender, EventArgs e)
+        private void AddObject_Click(object sender, EventArgs e)
         {
             var addForm = new AddObjectForm();
             if (addForm.ShowDialog() == DialogResult.OK)
@@ -24,18 +31,17 @@ namespace StarSystemApp
                 var newObject = addForm.CreatedObject;
                 if (newObject != null)
                 {
-                    starSystem.AddSpaceObject(newObject);
+                    starSystem.AddObject(newObject);
                     UpdateListBox();
                 }
             }
         }
 
-        // Обработчик события удаления объекта
         private void DeleteObject_Click(object sender, EventArgs e)
         {
             if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
             {
-                starSystem.RemoveSpaceObject(selectedObject);
+                starSystem.RemoveObject(selectedObject);
                 UpdateListBox();
             }
             else
@@ -44,27 +50,28 @@ namespace StarSystemApp
             }
         }
 
-        // Обработчик события отображения информации
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ShowInfo_Click(object sender, EventArgs e)
         {
             if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
             {
                 ObjectLabel.Text = selectedObject.GetInfo();
             }
+            else
+            {
+                MessageBox.Show("Выберите объект для отображения информации.", "Ошибка");
+            }
         }
 
-        // Обработчик события сортировки
         private void Sort_Click(object sender, EventArgs e)
         {
-            starSystem.SortSpaceObjects(); // Допустим, сортируем по массе
+            starSystem.SortByMass(); // Допустим, сортируем по массе
             UpdateListBox();
         }
 
-        // Метод обновления списка в ListBox
         private void UpdateListBox()
         {
             ListBoxObject.Items.Clear();
-            foreach (var obj in starSystem.GetAllSpaceObjects())
+            foreach (var obj in starSystem.GetObjects())
             {
                 ListBoxObject.Items.Add(obj);
             }
