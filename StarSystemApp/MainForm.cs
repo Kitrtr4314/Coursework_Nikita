@@ -56,22 +56,8 @@ namespace StarSystemApp
         // Обработчик события сортировки
         private void Sort_Click(object sender, EventArgs e)
         {
-            starSystem.SortByMass(); // Сортируем по массе
+            starSystem.SortByMass(); // Допустим, сортируем по массе
             UpdateListBox();
-        }
-
-        // Обработчик события для кнопки "Посмотреть информацию"
-        private void ShowInfo_Click(object sender, EventArgs e)
-        {
-            if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
-            {
-                // Отображаем полную информацию о выбранном объекте
-                MessageBox.Show(selectedObject.GetInfo(), "Информация о объекте");
-            }
-            else
-            {
-                MessageBox.Show("Выберите объект для просмотра информации.", "Ошибка");
-            }
         }
 
         // Метод обновления списка в ListBox
@@ -80,8 +66,7 @@ namespace StarSystemApp
             ListBoxObject.Items.Clear();
             foreach (var obj in starSystem.GetObjects())
             {
-                // Можно отображать только имя или тип объекта, чтобы список был более удобочитаемым
-                ListBoxObject.Items.Add(obj.Name); // или obj.GetType().Name если нужно имя класса
+                ListBoxObject.Items.Add(obj);
             }
         }
     }
