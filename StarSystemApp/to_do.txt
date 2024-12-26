@@ -1,0 +1,30 @@
+0>AddObjectForm.cs(20,17): Error CS0103 : Имя "rbStar" не существует в текущем контексте.
+0>AddObjectForm.cs(22,17): Error CS0103 : Имя "nudLuminosity" не существует в текущем контексте.
+0>AddObjectForm.cs(23,17): Error CS0103 : Имя "nudMoonsCount" не существует в текущем контексте.
+0>AddObjectForm.cs(24,17): Error CS0103 : Имя "txtPlanetName" не существует в текущем контексте.
+0>AddObjectForm.cs(26,22): Error CS0103 : Имя "rbPlanet" не существует в текущем контексте.
+0>AddObjectForm.cs(28,17): Error CS0103 : Имя "nudLuminosity" не существует в текущем контексте.
+0>AddObjectForm.cs(29,17): Error CS0103 : Имя "nudMoonsCount" не существует в текущем контексте.
+0>AddObjectForm.cs(30,17): Error CS0103 : Имя "txtPlanetName" не существует в текущем контексте.
+0>AddObjectForm.cs(32,22): Error CS0103 : Имя "rbMoon" не существует в текущем контексте.
+0>AddObjectForm.cs(34,17): Error CS0103 : Имя "nudLuminosity" не существует в текущем контексте.
+0>AddObjectForm.cs(35,17): Error CS0103 : Имя "nudMoonsCount" не существует в текущем контексте.
+0>AddObjectForm.cs(36,17): Error CS0103 : Имя "txtPlanetName" не существует в текущем контексте.
+0>MainForm.cs(27,32): Error CS1061 : "StarSystem" не содержит определения "AddObject", и не удалось найти доступный метод расширения "AddObject", принимающий тип "StarSystem" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>AddObjectForm.cs(52,40): Error CS0103 : Имя "txtMass" не существует в текущем контексте.
+0>AddObjectForm.cs(53,44): Error CS0103 : Имя "txtDiameter" не существует в текущем контексте.
+0>AddObjectForm.cs(54,37): Error CS0103 : Имя "txtAge" не существует в текущем контексте.
+0>AddObjectForm.cs(56,21): Error CS0103 : Имя "rbStar" не существует в текущем контексте.
+0>AddObjectForm.cs(59,45): Error CS0103 : Имя "nudLuminosity" не существует в текущем контексте.
+0>AddObjectForm.cs(68,26): Error CS0103 : Имя "rbPlanet" не существует в текущем контексте.
+0>AddObjectForm.cs(71,43): Error CS0103 : Имя "nudMoonsCount" не существует в текущем контексте.
+0>AddObjectForm.cs(80,26): Error CS0103 : Имя "rbMoon" не существует в текущем контексте.
+0>AddObjectForm.cs(83,38): Error CS0103 : Имя "txtPlanetName" не существует в текущем контексте.
+0>AddObjectForm.Designer.cs(70,81): Error CS1061 : "AddObjectForm" не содержит определения "RadioButtonMoon_CheckedChanged", и не удалось найти доступный метод расширения "RadioButtonMoon_CheckedChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>AddObjectForm.Designer.cs(91,76): Error CS1061 : "AddObjectForm" не содержит определения "ButtonStar_CheckedChanged", и не удалось найти доступный метод расширения "ButtonStar_CheckedChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>AddObjectForm.Designer.cs(100,74): Error CS1061 : "AddObjectForm" не содержит определения "textBox1_TextChanged", и не удалось найти доступный метод расширения "textBox1_TextChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>AddObjectForm.Designer.cs(109,77): Error CS1061 : "AddObjectForm" не содержит определения "TextBoxDiametr_TextChanged", и не удалось найти доступный метод расширения "TextBoxDiametr_TextChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>MainForm.cs(38,28): Error CS1061 : "StarSystem" не содержит определения "RemoveObject", и не удалось найти доступный метод расширения "RemoveObject", принимающий тип "StarSystem" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>MainForm.cs(59,24): Error CS1061 : "StarSystem" не содержит определения "SortByMass", и не удалось найти доступный метод расширения "SortByMass", принимающий тип "StarSystem" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>MainForm.cs(67,44): Error CS1061 : "StarSystem" не содержит определения "GetObjects", и не удалось найти доступный метод расширения "GetObjects", принимающий тип "StarSystem" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+0>------- Finished building project: StarSystemApp. Succeeded: False. Errors: 29. Warnings: 0
