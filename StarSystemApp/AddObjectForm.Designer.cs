@@ -48,7 +48,7 @@ namespace StarSystemApp
             this.txtPlanetName = new System.Windows.Forms.TextBox();
             this.txtMass = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
-            this.txtDiametr = new System.Windows.Forms.TextBox();
+            this.txtDiameter = new System.Windows.Forms.TextBox();
             this.GroupBoxObjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudLuminosity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMoonsCount)).BeginInit();
@@ -203,19 +203,19 @@ namespace StarSystemApp
             this.txtAge.Size = new System.Drawing.Size(82, 22);
             this.txtAge.TabIndex = 13;
             // 
-            // txtDiametr
+            // txtDiameter
             // 
-            this.txtDiametr.Location = new System.Drawing.Point(346, 84);
-            this.txtDiametr.Name = "txtDiametr";
-            this.txtDiametr.Size = new System.Drawing.Size(82, 22);
-            this.txtDiametr.TabIndex = 14;
+            this.txtDiameter.Location = new System.Drawing.Point(346, 84);
+            this.txtDiameter.Name = "txtDiameter";
+            this.txtDiameter.Size = new System.Drawing.Size(82, 22);
+            this.txtDiameter.TabIndex = 14;
             // 
             // AddObjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 499);
-            this.Controls.Add(this.txtDiametr);
+            this.Controls.Add(this.txtDiameter);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtMass);
             this.Controls.Add(this.txtPlanetName);
@@ -241,7 +241,7 @@ namespace StarSystemApp
 
         private System.Windows.Forms.TextBox txtMass;
         private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.TextBox txtDiametr;
+        private System.Windows.Forms.TextBox txtDiameter;
 
         private System.Windows.Forms.TextBox txtPlanetName;
 
