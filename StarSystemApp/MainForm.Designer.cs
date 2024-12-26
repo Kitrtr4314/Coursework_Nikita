@@ -32,10 +32,10 @@ namespace StarSystemApp
         private void InitializeComponent()
         {
             this.ListBoxObject = new System.Windows.Forms.ListBox();
-            this.AddObject = new System.Windows.Forms.Button();
-            this.DeleteObject = new System.Windows.Forms.Button();
-            this.ShowInfo = new System.Windows.Forms.Button();
-            this.Sort = new System.Windows.Forms.Button();
+            this.btnAddObject = new System.Windows.Forms.Button();
+            this.btnRemoveObject = new System.Windows.Forms.Button();
+            this.btnViewInfo = new System.Windows.Forms.Button();
+            this.btnSort = new System.Windows.Forms.Button();
             this.ObjectLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -50,43 +50,43 @@ namespace StarSystemApp
             this.ListBoxObject.TabIndex = 2;
             this.ListBoxObject.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // AddObject
+            // btnAddObject
             // 
-            this.AddObject.Location = new System.Drawing.Point(12, 64);
-            this.AddObject.Name = "AddObject";
-            this.AddObject.Size = new System.Drawing.Size(200, 40);
-            this.AddObject.TabIndex = 3;
-            this.AddObject.Text = "Добавить объект";
-            this.AddObject.UseVisualStyleBackColor = true;
-            this.AddObject.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddObject.Location = new System.Drawing.Point(12, 64);
+            this.btnAddObject.Name = "btnAddObject";
+            this.btnAddObject.Size = new System.Drawing.Size(200, 40);
+            this.btnAddObject.TabIndex = 3;
+            this.btnAddObject.Text = "Добавить объект";
+            this.btnAddObject.UseVisualStyleBackColor = true;
+            this.btnAddObject.Click += new System.EventHandler(this.button1_Click);
             // 
-            // DeleteObject
+            // btnRemoveObject
             // 
-            this.DeleteObject.Location = new System.Drawing.Point(238, 64);
-            this.DeleteObject.Name = "DeleteObject";
-            this.DeleteObject.Size = new System.Drawing.Size(200, 40);
-            this.DeleteObject.TabIndex = 4;
-            this.DeleteObject.Text = "Удалить объект";
-            this.DeleteObject.UseVisualStyleBackColor = true;
-            this.DeleteObject.Click += new System.EventHandler(this.DeleteObject_Click);
+            this.btnRemoveObject.Location = new System.Drawing.Point(238, 64);
+            this.btnRemoveObject.Name = "btnRemoveObject";
+            this.btnRemoveObject.Size = new System.Drawing.Size(200, 40);
+            this.btnRemoveObject.TabIndex = 4;
+            this.btnRemoveObject.Text = "Удалить объект";
+            this.btnRemoveObject.UseVisualStyleBackColor = true;
+            this.btnRemoveObject.Click += new System.EventHandler(this.DeleteObject_Click);
             // 
-            // ShowInfo
+            // btnViewInfo
             // 
-            this.ShowInfo.Location = new System.Drawing.Point(12, 138);
-            this.ShowInfo.Name = "ShowInfo";
-            this.ShowInfo.Size = new System.Drawing.Size(200, 40);
-            this.ShowInfo.TabIndex = 5;
-            this.ShowInfo.Text = "Посмотреть информацию";
-            this.ShowInfo.UseVisualStyleBackColor = true;
+            this.btnViewInfo.Location = new System.Drawing.Point(12, 138);
+            this.btnViewInfo.Name = "btnViewInfo";
+            this.btnViewInfo.Size = new System.Drawing.Size(200, 40);
+            this.btnViewInfo.TabIndex = 5;
+            this.btnViewInfo.Text = "Посмотреть информацию";
+            this.btnViewInfo.UseVisualStyleBackColor = true;
             // 
-            // Sort
+            // btnSort
             // 
-            this.Sort.Location = new System.Drawing.Point(238, 138);
-            this.Sort.Name = "Sort";
-            this.Sort.Size = new System.Drawing.Size(200, 40);
-            this.Sort.TabIndex = 6;
-            this.Sort.Text = "Сортировать";
-            this.Sort.UseVisualStyleBackColor = true;
+            this.btnSort.Location = new System.Drawing.Point(238, 138);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(200, 40);
+            this.btnSort.TabIndex = 6;
+            this.btnSort.Text = "Сортировать";
+            this.btnSort.UseVisualStyleBackColor = true;
             // 
             // ObjectLabel
             // 
@@ -102,24 +102,24 @@ namespace StarSystemApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 499);
             this.Controls.Add(this.ObjectLabel);
-            this.Controls.Add(this.Sort);
-            this.Controls.Add(this.ShowInfo);
-            this.Controls.Add(this.DeleteObject);
-            this.Controls.Add(this.AddObject);
+            this.Controls.Add(this.btnSort);
+            this.Controls.Add(this.btnViewInfo);
+            this.Controls.Add(this.btnRemoveObject);
+            this.Controls.Add(this.btnAddObject);
             this.Controls.Add(this.ListBoxObject);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button DeleteObject;
-        private System.Windows.Forms.Button ShowInfo;
-        private System.Windows.Forms.Button Sort;
+        private System.Windows.Forms.Button btnRemoveObject;
+        private System.Windows.Forms.Button btnViewInfo;
+        private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Label ObjectLabel;
 
         private System.Windows.Forms.ListBox ListBoxObject;
 
-        private System.Windows.Forms.Button AddObject;
+        private System.Windows.Forms.Button btnAddObject;
 
         #endregion
     }

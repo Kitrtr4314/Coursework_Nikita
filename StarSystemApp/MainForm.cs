@@ -24,7 +24,7 @@ namespace StarSystemApp
                 var newObject = addForm.CreatedObject;
                 if (newObject != null)
                 {
-                    starSystem.AddObject(newObject);
+                    starSystem.AddSpaceObject(newObject);
                     UpdateListBox();
                 }
             }
@@ -35,7 +35,7 @@ namespace StarSystemApp
         {
             if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
             {
-                starSystem.RemoveObject(selectedObject);
+                starSystem.RemoveSpaceObject(selectedObject);
                 UpdateListBox();
             }
             else
@@ -56,7 +56,7 @@ namespace StarSystemApp
         // Обработчик события сортировки
         private void Sort_Click(object sender, EventArgs e)
         {
-            starSystem.SortByMass(); // Допустим, сортируем по массе
+            starSystem.SortSpaceObjects(); // Допустим, сортируем по массе
             UpdateListBox();
         }
 
@@ -64,7 +64,7 @@ namespace StarSystemApp
         private void UpdateListBox()
         {
             ListBoxObject.Items.Clear();
-            foreach (var obj in starSystem.GetObjects())
+            foreach (var obj in starSystem.GetAllSpaceObjects())
             {
                 ListBoxObject.Items.Add(obj);
             }
