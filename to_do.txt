@@ -1,8 +1,28 @@
-0>IAddObjectForm.cs(2,22): Error CS0234 : Тип или имя пространства имен "Forms" не существует в пространстве имен "System.Windows" (возможно, отсутствует ссылка на сборку).
-0>IAddObjectForm.cs(3,7): Error CS0246 : Не удалось найти тип или имя пространства имен "StarSystemLibrary" (возможно, отсутствует директива using или ссылка на сборку).
-0>MainForm.cs(3,22): Error CS0234 : Тип или имя пространства имен "Forms" не существует в пространстве имен "System.Windows" (возможно, отсутствует ссылка на сборку).
-0>MainForm.cs(4,7): Error CS0246 : Не удалось найти тип или имя пространства имен "StarSystemLibrary" (возможно, отсутствует директива using или ссылка на сборку).
-0>IAddObjectForm.cs(7,42): Error CS0246 : Не удалось найти тип или имя пространства имен "Form" (возможно, отсутствует директива using или ссылка на сборку).
-0>MainForm.cs(8,37): Error CS0246 : Не удалось найти тип или имя пространства имен "Form" (возможно, отсутствует директива using или ссылка на сборку).
-0>------- Finished building project: Coursework_Nikita. Succeeded: False. Errors: 6. Warnings: 0
-Build completed in 00:00:01.771
+0>IAddObjectForm.cs(13,13): Error CS0103 : Имя "InitializeComponent" не существует в текущем контексте.
+0>MainForm.cs(14,13): Error CS0103 : Имя "InitializeComponent" не существует в текущем контексте.
+0>MainForm.cs(21,13): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
+0>MainForm.cs(24,17): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
+0>IAddObjectForm.cs(19,43): Error CS0103 : Имя "txtMass" не существует в текущем контексте.
+0>IAddObjectForm.cs(20,43): Error CS0103 : Имя "txtDiameter" не существует в текущем контексте.
+0>IAddObjectForm.cs(21,43): Error CS0103 : Имя "txtAge" не существует в текущем контексте.
+0>IAddObjectForm.cs(27,33): Error CS0103 : Имя "txtMass" не существует в текущем контексте.
+0>IAddObjectForm.cs(28,33): Error CS0103 : Имя "txtDiameter" не существует в текущем контексте.
+0>IAddObjectForm.cs(29,31): Error CS0103 : Имя "txtAge" не существует в текущем контексте.
+0>IAddObjectForm.cs(36,17): Error CS0103 : Имя "rbStar" не существует в текущем контексте.
+0>IAddObjectForm.cs(43,41): Error CS0103 : Имя "nudLuminosity" не существует в текущем контексте.
+0>IAddObjectForm.cs(46,22): Error CS0103 : Имя "rbPlanet" не существует в текущем контексте.
+0>IAddObjectForm.cs(53,39): Error CS0103 : Имя "nudMoonsCount" не существует в текущем контексте.
+0>IAddObjectForm.cs(56,22): Error CS0103 : Имя "rbMoon" не существует в текущем контексте.
+0>IAddObjectForm.cs(63,34): Error CS0103 : Имя "txtPlanetName" не существует в текущем контексте.
+0>IAddObjectForm.cs(79,13): Error CS0103 : Имя "nudLuminosity" не существует в текущем контексте.
+0>IAddObjectForm.cs(79,37): Error CS0103 : Имя "rbStar" не существует в текущем контексте.
+0>IAddObjectForm.cs(84,13): Error CS0103 : Имя "nudMoonsCount" не существует в текущем контексте.
+0>IAddObjectForm.cs(84,37): Error CS0103 : Имя "rbPlanet" не существует в текущем контексте.
+0>IAddObjectForm.cs(89,13): Error CS0103 : Имя "txtPlanetName" не существует в текущем контексте.
+0>IAddObjectForm.cs(89,37): Error CS0103 : Имя "rbMoon" не существует в текущем контексте.
+0>MainForm.cs(37,17): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
+0>MainForm.cs(43,67): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
+0>MainForm.cs(49,17): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
+0>MainForm.cs(55,67): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
+0>------- Finished building project: Coursework_Nikita. Succeeded: False. Errors: 26. Warnings: 0
+Build completed in 00:00:02.032
