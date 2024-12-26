@@ -1,79 +1,66 @@
 using System;
-using System.Linq;
 using System.Windows.Forms;
-using StarSystemLibrary;
 
 namespace StarSystemApp
 {
     public partial class MainForm : Form
     {
-        private readonly StarSystem starSystem = new StarSystem();
+        private StarSystem starSystem;
 
         public MainForm()
         {
             InitializeComponent();
-
-            // Привязка обработчиков событий
-            AddObject.Click += AddObject_Click;
-            DeleteObject.Click += DeleteObject_Click;
-            ShowInfo.Click += ShowInfo_Click;
-            Sort.Click += Sort_Click;
-
-            // Обновление списка
-            UpdateListBox();
+            starSystem = new StarSystem();
         }
 
-        private void AddObject_Click(object sender, EventArgs e)
+        private void btnAddObject_Click(object sender, EventArgs e)
         {
-            var addForm = new AddObjectForm();
-            if (addForm.ShowDialog() == DialogResult.OK)
+            var addObjectForm = new AddObjectForm();
+            if (addObjectForm.ShowDialog() == DialogResult.OK)
             {
-                var newObject = addForm.CreatedObject;
-                if (newObject != null)
-                {
-                    starSystem.AddObject(newObject);
-                    UpdateListBox();
-                }
+                var newObject = addObjectForm.CreatedObject;
+                starSystem.AddObject(newObject);
+                UpdateObjectList();
             }
         }
 
-        private void DeleteObject_Click(object sender, EventArgs e)
+        private void btnRemoveObject_Click(object sender, EventArgs e)
         {
-            if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
+            if (listBoxObjects.SelectedItem is CelestialObject selectedObject)
             {
                 starSystem.RemoveObject(selectedObject);
-                UpdateListBox();
+                UpdateObjectList();
             }
             else
             {
-                MessageBox.Show("Выберите объект для удаления.", "Ошибка");
+                MessageBox.Show("Пожалуйста, выберите объект для удаления.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void ShowInfo_Click(object sender, EventArgs e)
+        private void btnViewInfo_Click(object sender, EventArgs e)
         {
-            if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
+            if (listBoxObjects.SelectedItem is CelestialObject selectedObject)
             {
-                ObjectLabel.Text = selectedObject.GetInfo();
+                MessageBox.Show(selectedObject.GetInfo(), "Информация об объекте", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Выберите объект для отображения информации.", "Ошибка");
+                MessageBox.Show("Пожалуйста, выберите объект для просмотра.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void Sort_Click(object sender, EventArgs e)
+        private void btnSort_Click(object sender, EventArgs e)
         {
-            starSystem.SortByMass(); // Допустим, сортируем по массе
-            UpdateListBox();
+            starSystem.SortByMass();
+            UpdateObjectList();
         }
 
-        private void UpdateListBox()
+        private void UpdateObjectList()
         {
-            ListBoxObject.Items.Clear();
+            listBoxObjects.Items.Clear();
             foreach (var obj in starSystem.GetObjects())
             {
-                ListBoxObject.Items.Add(obj);
+                listBoxObjects.Items.Add(obj);
             }
         }
     }
