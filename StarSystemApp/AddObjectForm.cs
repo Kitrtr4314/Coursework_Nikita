@@ -8,9 +8,36 @@ namespace StarSystemApp
     {
         public SpaceObject CreatedObject { get; private set; }
 
-        public AddObjectForm()
+        public AddObjectForm(SpaceObject objectToEdit = null)
         {
             InitializeComponent();
+            if (objectToEdit != null)
+            {
+                // Заполнение полей значениями существующего объекта, если он передан для редактирования
+                txtName.Text = objectToEdit.Name;
+                txtMass.Text = objectToEdit.Mass.ToString();
+                txtDiameter.Text = objectToEdit.EquatorialDiameter.ToString();
+                txtAge.Text = objectToEdit.Age.ToString();
+
+                if (objectToEdit is Star star)
+                {
+                    rbStar.Checked = true;
+                    nudLuminosity.Value = (decimal)star.Luminosity;
+                }
+                else if (objectToEdit is Planet planet)
+                {
+                    rbPlanet.Checked = true;
+                    nudMoonsCount.Value = planet.MoonsCount;
+                }
+                else if (objectToEdit is Moon moon)
+                {
+                    rbMoon.Checked = true;
+                    txtPlanetName.Text = moon.PlanetName;
+                }
+
+                CreatedObject = objectToEdit; // Сохраняем объект для редактирования
+            }
+            
             ToggleInputs();
         }
 
@@ -50,7 +77,7 @@ namespace StarSystemApp
                     MessageBox.Show("Пожалуйста, введите название объекта.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                
+
                 // Проверка на валидность массы, диаметра и возраста
                 if (!float.TryParse(txtMass.Text, out var mass) || mass <= 0)
                 {
@@ -69,48 +96,81 @@ namespace StarSystemApp
                     MessageBox.Show("Возраст должен быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                
+
                 // Общие свойства
                 string name = txtName.Text;
 
                 if (rbStar.Checked)
                 {
-                    // Создание звезды
+                    // Создание или обновление звезды
                     var luminosity = (float)nudLuminosity.Value;
-                    CreatedObject = new Star
+                    if (CreatedObject is Star star)
                     {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        Luminosity = luminosity,
-                        Name = name
-                    };
+                        star.Name = name;
+                        star.Mass = mass;
+                        star.EquatorialDiameter = diameter;
+                        star.Age = age;
+                        star.Luminosity = luminosity;
+                    }
+                    else
+                    {
+                        CreatedObject = new Star
+                        {
+                            Name = name,
+                            Mass = mass,
+                            EquatorialDiameter = diameter,
+                            Age = age,
+                            Luminosity = luminosity
+                        };
+                    }
                 }
                 else if (rbPlanet.Checked)
                 {
-                    // Создание планеты
+                    // Создание или обновление планеты
                     var moonCount = (int)nudMoonsCount.Value;
-                    CreatedObject = new Planet
+                    if (CreatedObject is Planet planet)
                     {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        MoonsCount = moonCount,
-                        Name = name
-                    };
+                        planet.Name = name;
+                        planet.Mass = mass;
+                        planet.EquatorialDiameter = diameter;
+                        planet.Age = age;
+                        planet.MoonsCount = moonCount;
+                    }
+                    else
+                    {
+                        CreatedObject = new Planet
+                        {
+                            Name = name,
+                            Mass = mass,
+                            EquatorialDiameter = diameter,
+                            Age = age,
+                            MoonsCount = moonCount
+                        };
+                    }
                 }
                 else if (rbMoon.Checked)
                 {
-                    // Создание луны
+                    // Создание или обновление луны
                     var planetName = txtPlanetName.Text;
-                    CreatedObject = new Moon
+                    if (CreatedObject is Moon moon)
                     {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        PlanetName = planetName,
-                        Name = name
-                    };
+                        moon.Name = name;
+                        moon.Mass = mass;
+                        moon.EquatorialDiameter = diameter;
+                        moon.Age = age;
+                        moon.PlanetName = planetName;
+                    }
+                    else
+                    {
+                        CreatedObject = new Moon
+                        {
+                            Name = name,
+                            Mass = mass,
+                            EquatorialDiameter = diameter,
+                            Age = age,
+                            PlanetName = planetName
+                        };
+                    }
                 }
                 else
                 {
