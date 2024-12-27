@@ -37,7 +37,7 @@ namespace StarSystemApp
             {
                 nudLuminosity.Enabled = false;
                 nudMoonsCount.Enabled = false;
-                txtPlanetName.Enabled = false;
+                txtPlanetName.Enabled = true;
             }
         }
 
