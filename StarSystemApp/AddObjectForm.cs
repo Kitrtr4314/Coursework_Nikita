@@ -102,7 +102,7 @@ namespace StarSystemApp
                 else if (rbMoon.Checked)
                 {
                     // Создание луны
-                    var planetName = (string)txtPlanetName.Text;
+                    var planetName = txtPlanetName.Text;
                     CreatedObject = new Moon
                     {
                         Mass = mass,
