@@ -17,19 +17,17 @@ namespace StarSystemApp
 
         private void btnAddObject_Click(object sender, EventArgs e)
         {
-            var addObjectForm = new AddObjectForm();
-            if (addObjectForm.ShowDialog() == DialogResult.OK)
+            using (var addObjectForm = new AddObjectForm())
             {
-                var newObject = addObjectForm.CreatedObject;
-                if (newObject != null)
+                if (addObjectForm.ShowDialog() == DialogResult.OK)
                 {
-                    starSystem.AddSpaceObject(newObject);
-                    UpdateObjectList();
-                    ObjectLabel.Text = "Объект добавлен!";
-                }
-                else
-                {
-                    MessageBox.Show("Ошибка при создании объекта.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var newObject = addObjectForm.CreatedObject;
+                    if (newObject != null)
+                    {
+                        starSystem.AddSpaceObject(newObject);
+                        UpdateObjectList();
+                        MessageBox.Show("Объект успешно добавлен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
