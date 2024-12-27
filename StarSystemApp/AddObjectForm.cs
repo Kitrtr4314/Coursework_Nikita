@@ -45,10 +45,17 @@ namespace StarSystemApp
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtName.Text))
+                {
+                    MessageBox.Show("Пожалуйста, введите название объекта.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                
                 // Общие свойства
                 var mass = float.Parse(txtMass.Text);
                 var diameter = float.Parse(txtDiameter.Text);
                 var age = int.Parse(txtAge.Text);
+                string name = txtName.Text;
 
                 if (rbStar.Checked)
                 {
@@ -59,7 +66,8 @@ namespace StarSystemApp
                         Mass = mass,
                         EquatorialDiameter = diameter,
                         Age = age,
-                        Luminosity = luminosity
+                        Luminosity = luminosity,
+                        Name = name
                     };
                 }
                 else if (rbPlanet.Checked)
@@ -71,7 +79,8 @@ namespace StarSystemApp
                         Mass = mass,
                         EquatorialDiameter = diameter,
                         Age = age,
-                        MoonsCount = moonCount
+                        MoonsCount = moonCount,
+                        Name = name
                     };
                 }
                 else if (rbMoon.Checked)
@@ -83,7 +92,8 @@ namespace StarSystemApp
                         Mass = mass,
                         EquatorialDiameter = diameter,
                         Age = age,
-                        PlanetName = planetName
+                        PlanetName = planetName,
+                        Name = name
                     };
                 }
                 else
