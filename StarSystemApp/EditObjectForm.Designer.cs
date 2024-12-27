@@ -73,7 +73,6 @@ namespace StarSystemApp
             this.txtMass.Name = "txtMass";
             this.txtMass.Size = new System.Drawing.Size(133, 22);
             this.txtMass.TabIndex = 2;
-            this.txtMass.TextChanged += new System.EventHandler(this.txtMass_TextChanged);
             // 
             // txtAge
             // 

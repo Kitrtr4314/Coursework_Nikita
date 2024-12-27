@@ -56,6 +56,12 @@ namespace StarSystemApp
             nudMoonsCount.Enabled = EditedObject is Planet;
             txtPlanetName.Enabled = EditedObject is Moon;
         }
+        
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
