@@ -67,6 +67,7 @@ namespace StarSystemApp
             this.btnViewInfo.TabIndex = 5;
             this.btnViewInfo.Text = "Посмотреть информацию";
             this.btnViewInfo.UseVisualStyleBackColor = true;
+            this.btnViewInfo.Click += new System.EventHandler(this.btnViewInfo_Click);
             // 
             // btnSort
             // 
@@ -76,6 +77,7 @@ namespace StarSystemApp
             this.btnSort.TabIndex = 6;
             this.btnSort.Text = "Сортировать";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // ObjectLabel
             // 
