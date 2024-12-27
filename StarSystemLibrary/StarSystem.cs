@@ -51,15 +51,6 @@ namespace StarSystemLibrary
         {
             return new List<SpaceObject>(_spaceObjects);
         }
-
-        /// <summary>
-        /// Получить информацию обо всех объектах в звёздной системе.
-        /// </summary>
-        /// <returns>Список строк с информацией.</returns>
-        public List<string> GetAllObjectsInfo()
-        {
-            return _spaceObjects.Select(obj => obj.GetInfo()).ToList();
-        }
         
         /// <summary>
         /// Отсортировать объекты по указанному критерию (по умолчанию по возрастанию).
@@ -69,24 +60,6 @@ namespace StarSystemLibrary
         public void SortSpaceObjects<TKey>(Func<SpaceObject, TKey> keySelector)
         {
             _spaceObjects.Sort((x, y) => Comparer<TKey>.Default.Compare(keySelector(x), keySelector(y)));
-        }
-
-        /// <summary>
-        /// Перегруженный метод для сортировки по указанному критерию и порядку.
-        /// </summary>
-        /// <param name="keySelector">Функция для выбора ключа сортировки.</param>
-        /// <param name="ascending">Порядок сортировки: true для возрастания, false для убывания.</param>
-        /// <typeparam name="TKey">Тип ключа сортировки.</typeparam>
-        public void SortSpaceObjects<TKey>(Func<SpaceObject, TKey> keySelector, bool ascending)
-        {
-            if (ascending)
-            {
-                SortSpaceObjects(keySelector); // Используем существующий метод
-            }
-            else
-            {
-                _spaceObjects.Sort((x, y) => Comparer<TKey>.Default.Compare(keySelector(y), keySelector(x)));
-            }
         }
     }
 }
