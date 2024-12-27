@@ -51,6 +51,25 @@ namespace StarSystemApp
                     return;
                 }
                 
+                // Проверка на валидность массы, диаметра и возраста
+                if (!float.TryParse(txtMass.Text, out var mass) || mass <= 0)
+                {
+                    MessageBox.Show("Масса должна быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!float.TryParse(txtDiameter.Text, out var diameter) || diameter <= 0)
+                {
+                    MessageBox.Show("Диаметр должен быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(txtAge.Text, out var age) || age <= 0)
+                {
+                    MessageBox.Show("Возраст должен быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                
                 // Общие свойства
                 var mass = float.Parse(txtMass.Text);
                 var diameter = float.Parse(txtDiameter.Text);
