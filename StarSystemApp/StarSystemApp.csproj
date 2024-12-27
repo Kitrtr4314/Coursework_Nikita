@@ -80,6 +80,11 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="screens\Снимок экрана 2024-12-26 164933.png" />
+      <Content Include="screens\Снимок экрана 2024-12-27 210054.png" />
+      <Content Include="screens\Снимок экрана 2024-12-27 210144.png" />
+      <Content Include="screens\Снимок экрана 2024-12-27 210157.png" />
+      <Content Include="screens\Снимок экрана 2024-12-27 210321.png" />
+      <Content Include="screens\Снимок экрана 2024-12-27 210446.png" />
       <Content Include="to_do.txt" />
     </ItemGroup>
     <ItemGroup>
