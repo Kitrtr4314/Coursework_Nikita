@@ -86,6 +86,9 @@
       <EmbeddedResource Include="AddObjectForm.resx">
         <DependentUpon>AddObjectForm.cs</DependentUpon>
       </EmbeddedResource>
+      <EmbeddedResource Include="EditObjectForm.resx">
+        <DependentUpon>EditObjectForm.cs</DependentUpon>
+      </EmbeddedResource>
       <EmbeddedResource Include="MainForm.resx">
         <DependentUpon>MainForm.cs</DependentUpon>
       </EmbeddedResource>

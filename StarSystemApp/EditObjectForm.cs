@@ -151,5 +151,10 @@ namespace StarSystemApp
         {
             ToggleInputs();
         }
+
+        private void txtMass_TextChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

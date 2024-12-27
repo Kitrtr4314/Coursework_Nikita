@@ -44,6 +44,9 @@ namespace StarSystemApp
             this.TxtLum = new System.Windows.Forms.TextBox();
             this.txtMoons = new System.Windows.Forms.TextBox();
             this.txtPlanet = new System.Windows.Forms.TextBox();
+            this.TextBoxAge = new System.Windows.Forms.TextBox();
+            this.TextBoxDiametr = new System.Windows.Forms.TextBox();
+            this.textboxMass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudLuminosity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMoonsCount)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +56,7 @@ namespace StarSystemApp
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(12, 20);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(131, 17);
+            this.lblName.Size = new System.Drawing.Size(135, 17);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Название объекта:";
             // 
@@ -70,7 +73,7 @@ namespace StarSystemApp
             this.txtMass.Name = "txtMass";
             this.txtMass.Size = new System.Drawing.Size(220, 22);
             this.txtMass.TabIndex = 2;
-            this.txtMass.Text = "Масса:";
+            this.txtMass.TextChanged += new System.EventHandler(this.txtMass_TextChanged);
             // 
             // txtAge
             // 
@@ -78,7 +81,6 @@ namespace StarSystemApp
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(220, 22);
             this.txtAge.TabIndex = 3;
-            this.txtAge.Text = "Возраст:";
             // 
             // txtDiameter
             // 
@@ -86,7 +88,6 @@ namespace StarSystemApp
             this.txtDiameter.Name = "txtDiameter";
             this.txtDiameter.Size = new System.Drawing.Size(220, 22);
             this.txtDiameter.TabIndex = 4;
-            this.txtDiameter.Text = "Диаметр:";
             // 
             // txtPlanetName
             // 
@@ -153,11 +154,38 @@ namespace StarSystemApp
             this.txtPlanet.TabIndex = 12;
             this.txtPlanet.Text = "Планета:";
             // 
+            // TextBoxAge
+            // 
+            this.TextBoxAge.Location = new System.Drawing.Point(15, 176);
+            this.TextBoxAge.Name = "TextBoxAge";
+            this.TextBoxAge.Size = new System.Drawing.Size(120, 22);
+            this.TextBoxAge.TabIndex = 15;
+            this.TextBoxAge.Text = "Возраст:";
+            // 
+            // TextBoxDiametr
+            // 
+            this.TextBoxDiametr.Location = new System.Drawing.Point(15, 121);
+            this.TextBoxDiametr.Name = "TextBoxDiametr";
+            this.TextBoxDiametr.Size = new System.Drawing.Size(120, 22);
+            this.TextBoxDiametr.TabIndex = 14;
+            this.TextBoxDiametr.Text = "Диаметр:";
+            // 
+            // textboxMass
+            // 
+            this.textboxMass.Location = new System.Drawing.Point(15, 70);
+            this.textboxMass.Name = "textboxMass";
+            this.textboxMass.Size = new System.Drawing.Size(120, 22);
+            this.textboxMass.TabIndex = 13;
+            this.textboxMass.Text = "Масса:";
+            // 
             // EditObjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 418);
+            this.Controls.Add(this.TextBoxAge);
+            this.Controls.Add(this.TextBoxDiametr);
+            this.Controls.Add(this.textboxMass);
             this.Controls.Add(this.txtPlanet);
             this.Controls.Add(this.txtMoons);
             this.Controls.Add(this.TxtLum);
@@ -178,6 +206,10 @@ namespace StarSystemApp
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox TextBoxAge;
+        private System.Windows.Forms.TextBox TextBoxDiametr;
+        private System.Windows.Forms.TextBox textboxMass;
 
         #endregion
 

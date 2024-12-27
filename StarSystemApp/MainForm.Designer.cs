@@ -107,6 +107,7 @@ namespace StarSystemApp
             this.btnEditObject.TabIndex = 8;
             this.btnEditObject.Text = "Редактировать объект";
             this.btnEditObject.UseVisualStyleBackColor = true;
+            this.btnEditObject.Click += new System.EventHandler(this.btnEditObject_Click);
             // 
             // MainForm
             // 
