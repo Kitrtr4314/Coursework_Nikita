@@ -42,6 +42,6 @@ namespace StarSystemLibrary
         /// <param name="mass">Масса объекта.</param>
         /// <param name="diameter">Диаметр по экватору объекта.</param>
         /// <param name="age">Возраст объекта.</param>
-        public abstract void UpdateProperties(float mass, float diameter, int age);
+        public abstract void UpdateProperties(float mass, float diameter, int age, string name);
     }
 }

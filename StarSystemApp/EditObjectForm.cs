@@ -68,6 +68,10 @@ namespace StarSystemApp
             try
             {
                 // Проверка общих параметров
+                if (string.IsNullOrWhiteSpace(txtName.Text))
+                {
+                    MessageBox.Show("Имя объекта не может быть пустым.","Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 if (!float.TryParse(txtMass.Text, out var mass) || mass <= 0)
                 {
                     MessageBox.Show("Масса должна быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -87,7 +91,7 @@ namespace StarSystemApp
                 }
 
                 // Обновление общих свойств
-                EditedObject.UpdateProperties(mass, diameter, age);
+                EditedObject.UpdateProperties(mass, diameter, age,txtName.Text);
 
                 // Специфичные параметры для каждого типа объекта
                 if (EditedObject is Star star)
