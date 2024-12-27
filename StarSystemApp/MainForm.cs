@@ -12,6 +12,7 @@ namespace StarSystemApp
         {
             InitializeComponent();
             starSystem = new StarSystem();
+            ObjectLabel.Text = "Добро пожаловать!";
         }
 
         private void btnAddObject_Click(object sender, EventArgs e)
@@ -20,8 +21,16 @@ namespace StarSystemApp
             if (addObjectForm.ShowDialog() == DialogResult.OK)
             {
                 var newObject = addObjectForm.CreatedObject;
-                starSystem.AddSpaceObject(newObject);
-                UpdateObjectList();
+                if (newObject != null)
+                {
+                    starSystem.AddSpaceObject(newObject);
+                    UpdateObjectList();
+                    ObjectLabel.Text = "Объект добавлен!";
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка при создании объекта.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -31,6 +40,7 @@ namespace StarSystemApp
             {
                 starSystem.RemoveSpaceObject(selectedObject);
                 UpdateObjectList();
+                ObjectLabel.Text = "Объект удалён!";
             }
             else
             {
@@ -52,8 +62,29 @@ namespace StarSystemApp
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            starSystem.SortSpaceObjects(obj => obj.Mass);
-            UpdateObjectList();
+            // Пример диалогового окна для выбора параметра сортировки
+            var sortDialog = new SortDialog();
+            if (sortDialog.ShowDialog() == DialogResult.OK)
+            {
+                switch (sortDialog.SelectedCriteria)
+                {
+                    case "Масса":
+                        starSystem.SortSpaceObjects(obj => obj.Mass);
+                        break;
+                    case "Диаметр":
+                        starSystem.SortSpaceObjects(obj => obj.EquatorialDiameter);
+                        break;
+                    case "Возраст":
+                        starSystem.SortSpaceObjects(obj => obj.Age);
+                        break;
+                    default:
+                        MessageBox.Show("Неверный критерий сортировки.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                }
+
+                UpdateObjectList();
+                ObjectLabel.Text = $"Отсортировано по {sortDialog.SelectedCriteria}!";
+            }
         }
 
         private void UpdateObjectList()
@@ -67,7 +98,10 @@ namespace StarSystemApp
 
         private void ListBoxObject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
+            {
+                ObjectLabel.Text = $"Выбран объект: {selectedObject.Name}";
+            }
         }
     }
 }
