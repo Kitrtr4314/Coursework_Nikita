@@ -30,17 +30,30 @@ namespace StarSystemApp
             }
             else
             {
-                MessageBox.Show("Выберите критерий сортировки.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Выберите критерий сортировки.", "Ошибка", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
-            
+
+            // Добавляем обработку флага для сортировки по возрастанию/убыванию
             SortAscending = radioAscending.Checked;
-            
+
+            // Отладочная информация
+            Console.WriteLine("Selected Sort Criteria: " + SelectedSortCriteria.Method.Name);
+            Console.WriteLine("Sort Ascending: " + SortAscending);
+
+            // Закрываем форму и передаем результат
             DialogResult = DialogResult.OK;
             Close();
         }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Ошибка при выборе сортировки: " + ex.Message, "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+    }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+    private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
