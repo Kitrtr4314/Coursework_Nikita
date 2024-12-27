@@ -15,6 +15,10 @@ namespace StarSystemApp
             base.Dispose(disposing);
         }
 
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             this.labelInstruction = new System.Windows.Forms.Label();
@@ -30,7 +34,7 @@ namespace StarSystemApp
             this.labelInstruction.AutoSize = true;
             this.labelInstruction.Location = new System.Drawing.Point(12, 9);
             this.labelInstruction.Name = "labelInstruction";
-            this.labelInstruction.Size = new System.Drawing.Size(200, 17);
+            this.labelInstruction.Size = new System.Drawing.Size(224, 17);
             this.labelInstruction.TabIndex = 0;
             this.labelInstruction.Text = "Выберите критерий сортировки:";
             // 
@@ -39,7 +43,7 @@ namespace StarSystemApp
             this.radioMass.AutoSize = true;
             this.radioMass.Location = new System.Drawing.Point(15, 40);
             this.radioMass.Name = "radioMass";
-            this.radioMass.Size = new System.Drawing.Size(65, 21);
+            this.radioMass.Size = new System.Drawing.Size(70, 21);
             this.radioMass.TabIndex = 1;
             this.radioMass.TabStop = true;
             this.radioMass.Text = "Масса";
@@ -50,7 +54,7 @@ namespace StarSystemApp
             this.radioDiameter.AutoSize = true;
             this.radioDiameter.Location = new System.Drawing.Point(15, 70);
             this.radioDiameter.Name = "radioDiameter";
-            this.radioDiameter.Size = new System.Drawing.Size(89, 21);
+            this.radioDiameter.Size = new System.Drawing.Size(88, 21);
             this.radioDiameter.TabIndex = 2;
             this.radioDiameter.TabStop = true;
             this.radioDiameter.Text = "Диаметр";
@@ -61,7 +65,7 @@ namespace StarSystemApp
             this.radioAge.AutoSize = true;
             this.radioAge.Location = new System.Drawing.Point(15, 100);
             this.radioAge.Name = "radioAge";
-            this.radioAge.Size = new System.Drawing.Size(77, 21);
+            this.radioAge.Size = new System.Drawing.Size(83, 21);
             this.radioAge.TabIndex = 3;
             this.radioAge.TabStop = true;
             this.radioAge.Text = "Возраст";

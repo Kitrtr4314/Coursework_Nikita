@@ -75,6 +75,7 @@ namespace StarSystemApp
             this.rbMoon.TabStop = true;
             this.rbMoon.Text = "Луна";
             this.rbMoon.UseVisualStyleBackColor = true;
+            this.rbMoon.Click += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // rbPlanet
             // 
@@ -85,6 +86,7 @@ namespace StarSystemApp
             this.rbPlanet.TabStop = true;
             this.rbPlanet.Text = "Планета";
             this.rbPlanet.UseVisualStyleBackColor = true;
+            this.rbPlanet.Click += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // rbStar
             // 
@@ -95,6 +97,7 @@ namespace StarSystemApp
             this.rbStar.TabStop = true;
             this.rbStar.Text = "Звезда";
             this.rbStar.UseVisualStyleBackColor = true;
+            this.rbStar.Click += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // TxtLum
             // 
@@ -173,6 +176,7 @@ namespace StarSystemApp
             this.btnOk.TabIndex = 7;
             this.btnOk.Text = "Создать";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
