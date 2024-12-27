@@ -79,8 +79,8 @@
       </ProjectReference>
     </ItemGroup>
     <ItemGroup>
+      <Content Include="screens\Снимок экрана 2024-12-26 164933.png" />
       <Content Include="to_do.txt" />
-      <Content Include="Снимок экрана 2024-12-26 164933.png" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="AddObjectForm.resx">
