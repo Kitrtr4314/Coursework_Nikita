@@ -21,9 +21,24 @@ namespace StarSystemApp
 
         private void ToggleInputs()
         {
-            // Управляем видимостью и доступностью полей в зависимости от типа объекта
-            nudLuminosity.Enabled = rbStar.Checked;
-            txtPlanetName.Enabled = nudMoonsCount.Enabled = rbPlanet.Checked;
+            if (rbStar.Checked)
+            {
+                nudLuminosity.Enabled = true;
+                nudMoonsCount.Enabled = false;
+                txtPlanetName.Enabled = false;
+            }
+            else if (rbPlanet.Checked)
+            {
+                nudLuminosity.Enabled = false;
+                nudMoonsCount.Enabled = true;
+                txtPlanetName.Enabled = false;
+            }
+            else if (rbMoon.Checked)
+            {
+                nudLuminosity.Enabled = false;
+                nudMoonsCount.Enabled = false;
+                txtPlanetName.Enabled = false;
+            }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
