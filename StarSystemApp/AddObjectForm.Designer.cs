@@ -208,6 +208,22 @@ namespace StarSystemApp
             this.txtMass.Name = "txtMass";
             this.txtMass.Size = new System.Drawing.Size(82, 22);
             this.txtMass.TabIndex = 12;
+            //
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(33, 20);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(117, 17);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Название объекта:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(160, 20);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(200, 22);
+            this.txtName.TabIndex = 1;
             // 
             // AddObjectForm
             // 
@@ -230,6 +246,8 @@ namespace StarSystemApp
             this.Controls.Add(this.TextBoxDiametr);
             this.Controls.Add(this.textboxMass);
             this.Controls.Add(this.GroupBoxObjects);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtName);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "AddObjectForm";
             this.GroupBoxObjects.ResumeLayout(false);

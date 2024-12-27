@@ -8,6 +8,11 @@ namespace StarSystemLibrary
     public abstract class SpaceObject
     {
         /// <summary>
+        /// Имя объекта.
+        /// </summary>
+        public abstract string Name { get; set; }
+        
+        /// <summary>
         /// Масса объекта (в килограммах).
         /// </summary>
         public abstract float Mass { get; set; }

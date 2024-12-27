@@ -45,6 +45,11 @@ namespace StarSystemApp
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtName.Text))
+                {
+                    MessageBox.Show("Пожалуйста, введите название объекта.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 // Общие свойства
                 var mass = float.Parse(txtMass.Text);
                 var diameter = float.Parse(txtDiameter.Text);
