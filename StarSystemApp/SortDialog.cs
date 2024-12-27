@@ -7,6 +7,7 @@ namespace StarSystemApp
     public partial class SortDialog : Form
     {
         public Func<SpaceObject, object> SelectedSortCriteria { get; private set; }
+        public bool SortAscending { get; private set; }
 
         public SortDialog()
         {
@@ -32,7 +33,9 @@ namespace StarSystemApp
                 MessageBox.Show("Выберите критерий сортировки.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            
+            SortAscending = radioAscending.Checked;
+            
             DialogResult = DialogResult.OK;
             Close();
         }

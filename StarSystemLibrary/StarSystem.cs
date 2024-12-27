@@ -79,14 +79,7 @@ namespace StarSystemLibrary
         /// <typeparam name="TKey">Тип ключа сортировки.</typeparam>
         public void SortSpaceObjects<TKey>(Func<SpaceObject, TKey> keySelector, bool ascending)
         {
-            if (ascending)
-            {
-                SortSpaceObjects(keySelector); // Используем существующий метод
-            }
-            else
-            {
-                _spaceObjects.Sort((x, y) => Comparer<TKey>.Default.Compare(keySelector(y), keySelector(x)));
-            }
+            _spaceObjects.Sort((x, y) => Comparer<TKey>.Default.Compare(keySelector(y), keySelector(x)));
         }
     }
 }

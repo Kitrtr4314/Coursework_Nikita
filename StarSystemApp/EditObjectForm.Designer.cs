@@ -62,7 +62,7 @@ namespace StarSystemApp
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(236, 20);
+            this.txtName.Location = new System.Drawing.Point(236, 17);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(133, 22);
             this.txtName.TabIndex = 1;
@@ -181,7 +181,7 @@ namespace StarSystemApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 418);
+            this.ClientSize = new System.Drawing.Size(450, 499);
             this.Controls.Add(this.lblPlanet);
             this.Controls.Add(this.lblMoons);
             this.Controls.Add(this.lblLum);

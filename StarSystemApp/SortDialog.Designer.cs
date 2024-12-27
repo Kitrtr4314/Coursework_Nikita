@@ -21,13 +21,29 @@ namespace StarSystemApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.RadioButton radioAscending;
             this.labelInstruction = new System.Windows.Forms.Label();
             this.radioMass = new System.Windows.Forms.RadioButton();
             this.radioDiameter = new System.Windows.Forms.RadioButton();
             this.radioAge = new System.Windows.Forms.RadioButton();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioDescending = new System.Windows.Forms.RadioButton();
+            radioAscending = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // radioAscending
+            // 
+            radioAscending.AutoSize = true;
+            radioAscending.Location = new System.Drawing.Point(19, 40);
+            radioAscending.Name = "radioAscending";
+            radioAscending.Size = new System.Drawing.Size(137, 21);
+            radioAscending.TabIndex = 2;
+            radioAscending.TabStop = true;
+            radioAscending.Text = "По возрастанию";
+            radioAscending.UseVisualStyleBackColor = true;
             // 
             // labelInstruction
             // 
@@ -73,7 +89,7 @@ namespace StarSystemApp
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(15, 140);
+            this.btnOK.Location = new System.Drawing.Point(15, 230);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 30);
             this.btnOK.TabIndex = 4;
@@ -83,7 +99,7 @@ namespace StarSystemApp
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(130, 140);
+            this.btnCancel.Location = new System.Drawing.Point(287, 230);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 30);
             this.btnCancel.TabIndex = 5;
@@ -91,9 +107,32 @@ namespace StarSystemApp
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioDescending);
+            this.groupBox1.Controls.Add(radioAscending);
+            this.groupBox1.Location = new System.Drawing.Point(201, 70);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(235, 127);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Выберите способ сортировки";
+            // 
+            // radioDescending
+            // 
+            this.radioDescending.AutoSize = true;
+            this.radioDescending.Location = new System.Drawing.Point(19, 85);
+            this.radioDescending.Name = "radioDescending";
+            this.radioDescending.Size = new System.Drawing.Size(117, 21);
+            this.radioDescending.TabIndex = 3;
+            this.radioDescending.TabStop = true;
+            this.radioDescending.Text = "По убыванию";
+            this.radioDescending.UseVisualStyleBackColor = true;
+            // 
             // SortDialog
             // 
-            this.ClientSize = new System.Drawing.Size(250, 190);
+            this.ClientSize = new System.Drawing.Size(462, 511);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.radioAge);
@@ -104,9 +143,16 @@ namespace StarSystemApp
             this.Name = "SortDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Сортировка";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.RadioButton radioAscending;
+        private System.Windows.Forms.RadioButton radioDescending;
+
+        private System.Windows.Forms.GroupBox groupBox1;
 
         private System.Windows.Forms.Label labelInstruction;
         private System.Windows.Forms.RadioButton radioMass;

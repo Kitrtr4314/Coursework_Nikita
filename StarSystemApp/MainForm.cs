@@ -65,9 +65,17 @@ namespace StarSystemApp
                 if (sortDialog.ShowDialog() == DialogResult.OK)
                 {
                     var sortCriteria = sortDialog.SelectedSortCriteria;
+                    bool ascending = sortDialog.SortAscending;
                     if (sortCriteria != null)
                     {
-                        starSystem.SortSpaceObjects(sortCriteria);
+                        if (ascending == true)
+                        {
+                            starSystem.SortSpaceObjects(sortCriteria, ascending);
+                        }
+                        else
+                        {
+                            starSystem.SortSpaceObjects(sortCriteria);
+                        }
                         UpdateObjectList();
                         ObjectLabel.Text = "Объекты системы отсортированы.";
                     }
