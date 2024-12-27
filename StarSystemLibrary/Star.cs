@@ -7,6 +7,11 @@ namespace StarSystemLibrary
     /// </summary>
     public class Star : SpaceObject
     {
+        public override string ToString()
+        {
+            return Name;
+        }
+        public override string Name { get; set; }
         public override float Mass { get; set; }
         public override float EquatorialDiameter { get; set; }
         public override int Age { get; set; }

@@ -94,7 +94,7 @@ namespace StarSystemApp
             this.ListBoxObject.Items.AddRange(new object[] { "Список объектов" });
             this.ListBoxObject.Location = new System.Drawing.Point(12, 217);
             this.ListBoxObject.Name = "ListBoxObject";
-            this.ListBoxObject.Size = new System.Drawing.Size(200, 36);
+            this.ListBoxObject.Size = new System.Drawing.Size(200, 276);
             this.ListBoxObject.TabIndex = 2;
             this.ListBoxObject.SelectedIndexChanged += new System.EventHandler(this.ListBoxObject_SelectedIndexChanged);
             // 
