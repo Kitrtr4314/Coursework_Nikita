@@ -71,9 +71,6 @@ namespace StarSystemApp
                 }
                 
                 // Общие свойства
-                var mass = float.Parse(txtMass.Text);
-                var diameter = float.Parse(txtDiameter.Text);
-                var age = int.Parse(txtAge.Text);
                 string name = txtName.Text;
 
                 if (rbStar.Checked)
