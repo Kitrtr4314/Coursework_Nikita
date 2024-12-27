@@ -51,16 +51,7 @@ namespace StarSystemLibrary
         {
             return new List<SpaceObject>(_spaceObjects);
         }
-
-        /// <summary>
-        /// Получить информацию обо всех объектах в звёздной системе.
-        /// </summary>
-        /// <returns>Список строк с информацией.</returns>
-        public List<string> GetAllObjectsInfo()
-        {
-            return _spaceObjects.Select(obj => obj.GetInfo()).ToList();
-        }
-
+        
         /// <summary>
         /// Отсортировать объекты по указанному критерию.
         /// </summary>
