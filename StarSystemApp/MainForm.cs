@@ -95,23 +95,5 @@ namespace StarSystemApp
                 ObjectLabel.Text = "Выберите объект из списка.";
             }
         }
-        private void btnEditObject_Click(object sender, EventArgs e)
-        {
-            if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
-            {
-                using (var editObjectForm = new AddObjectForm(selectedObject))
-                {
-                    if (editObjectForm.ShowDialog() == DialogResult.OK)
-                    {
-                        UpdateObjectList(); // Обновляем список объектов после редактирования
-                        MessageBox.Show("Объект успешно отредактирован!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Пожалуйста, выберите объект для редактирования.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
     }
 }
