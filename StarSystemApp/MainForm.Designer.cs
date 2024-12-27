@@ -37,6 +37,7 @@ namespace StarSystemApp
             this.btnSort = new System.Windows.Forms.Button();
             this.ObjectLabel = new System.Windows.Forms.Label();
             this.ListBoxObject = new System.Windows.Forms.ListBox();
+            this.btnEditObject = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddObject
@@ -71,7 +72,7 @@ namespace StarSystemApp
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(238, 138);
+            this.btnSort.Location = new System.Drawing.Point(238, 217);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(200, 40);
             this.btnSort.TabIndex = 6;
@@ -81,7 +82,7 @@ namespace StarSystemApp
             // 
             // ObjectLabel
             // 
-            this.ObjectLabel.Location = new System.Drawing.Point(238, 217);
+            this.ObjectLabel.Location = new System.Drawing.Point(238, 281);
             this.ObjectLabel.Name = "ObjectLabel";
             this.ObjectLabel.Size = new System.Drawing.Size(200, 84);
             this.ObjectLabel.TabIndex = 7;
@@ -98,12 +99,23 @@ namespace StarSystemApp
             this.ListBoxObject.TabIndex = 2;
             this.ListBoxObject.SelectedIndexChanged += new System.EventHandler(this.ListBoxObject_SelectedIndexChanged);
             // 
+            // btnEditObject
+            // 
+            this.btnEditObject.Location = new System.Drawing.Point(238, 138);
+            this.btnEditObject.Name = "btnEditObject";
+            this.btnEditObject.Size = new System.Drawing.Size(200, 40);
+            this.btnEditObject.TabIndex = 8;
+            this.btnEditObject.Text = "Редактировать объект";
+            this.btnEditObject.UseVisualStyleBackColor = true;
+            this.btnEditObject.Click += new System.EventHandler(this.btnEditObject_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(450, 499);
+            this.Controls.Add(this.btnEditObject);
             this.Controls.Add(this.ObjectLabel);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnViewInfo);
@@ -114,6 +126,8 @@ namespace StarSystemApp
             this.Name = "MainForm";
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnEditObject;
 
         private System.Windows.Forms.ListBox ListBoxObject;
 

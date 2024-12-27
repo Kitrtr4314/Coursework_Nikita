@@ -26,11 +26,12 @@ namespace StarSystemLibrary
             return base.GetInfo() + $", Светимость: {Luminosity} L☉";
         }
 
-        public override void UpdateProperties(float mass, float diameter, int age)
+        public override void UpdateProperties(float mass, float diameter, int age, string name)
         {
             Mass = mass;
             EquatorialDiameter = diameter;
             Age = age;
+            Name = name;
         }
     }
 }
