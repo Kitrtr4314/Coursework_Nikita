@@ -1,15 +1,2 @@
-0>MainForm.cs(22,47): Error CS1061 : "AddObjectForm" не содержит определения "CreatedObject", и не удалось найти доступный метод расширения "CreatedObject", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>MainForm.cs(30,17): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
-0>MainForm.cs(43,17): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
-0>MainForm.cs(61,13): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
-0>MainForm.cs(64,17): Error CS0103 : Имя "listBoxObjects" не существует в текущем контексте.
-0>MainForm.Designer.cs(51,85): Error CS1061 : "MainForm" не содержит определения "listBox1_SelectedIndexChanged", и не удалось найти доступный метод расширения "listBox1_SelectedIndexChanged", принимающий тип "MainForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>MainForm.Designer.cs(61,69): Error CS1061 : "MainForm" не содержит определения "button1_Click", и не удалось найти доступный метод расширения "button1_Click", принимающий тип "MainForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>MainForm.Designer.cs(71,72): Error CS1061 : "MainForm" не содержит определения "DeleteObject_Click", и не удалось найти доступный метод расширения "DeleteObject_Click", принимающий тип "MainForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>AddObjectForm.Designer.cs(78,72): Error CS1061 : "AddObjectForm" не содержит определения "RadioButtonMoon_CheckedChanged", и не удалось найти доступный метод расширения "RadioButtonMoon_CheckedChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>AddObjectForm.Designer.cs(99,72): Error CS1061 : "AddObjectForm" не содержит определения "ButtonStar_CheckedChanged", и не удалось найти доступный метод расширения "ButtonStar_CheckedChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>AddObjectForm.Designer.cs(108,74): Error CS1061 : "AddObjectForm" не содержит определения "textBox1_TextChanged", и не удалось найти доступный метод расширения "textBox1_TextChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>AddObjectForm.Designer.cs(117,77): Error CS1061 : "AddObjectForm" не содержит определения "TextBoxDiametr_TextChanged", и не удалось найти доступный метод расширения "TextBoxDiametr_TextChanged", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>AddObjectForm.Designer.cs(159,62): Error CS1061 : "AddObjectForm" не содержит определения "btnCreate_Click", и не удалось найти доступный метод расширения "btnCreate_Click", принимающий тип "AddObjectForm" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
-0>------- Finished building project: StarSystemApp. Succeeded: False. Errors: 13. Warnings: 0
-Build completed in 00:00:02.249
+https://docs.google.com/document/d/19P_S3dhmoYZd5ph3bWXUt9UVIepmiSYMW909T7UrDOE/edit?tab=t.0
+https://docs.google.com/spreadsheets/d/1KIcsXHmc01C1ElTEhXmPbklM-Qbqvb-Qr8c5OjuCqIU/edit?gid=813334625#gid=813334625
