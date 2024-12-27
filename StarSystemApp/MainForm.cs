@@ -69,7 +69,7 @@ namespace StarSystemApp
                     {
                         starSystem.SortSpaceObjects(sortCriteria);
                         UpdateObjectList();
-                        ObjectLabel.Text = "Система отсортирована.";
+                        ObjectLabel.Text = "Объекты системы отсортированы.";
                     }
                 }
             }
