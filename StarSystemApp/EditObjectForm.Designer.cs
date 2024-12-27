@@ -137,7 +137,6 @@ namespace StarSystemApp
             this.lblmass.Size = new System.Drawing.Size(146, 22);
             this.lblmass.TabIndex = 18;
             this.lblmass.Text = "Масса(в кг):";
-            this.lblmass.Click += new System.EventHandler(this.lblmass_Click);
             // 
             // lblDiametr
             // 
