@@ -60,7 +60,7 @@ namespace StarSystemLibrary
         {
             return _spaceObjects.Select(obj => obj.GetInfo()).ToList();
         }
-        
+
         /// <summary>
         /// Отсортировать объекты по указанному критерию (по умолчанию по возрастанию).
         /// </summary>
@@ -79,7 +79,14 @@ namespace StarSystemLibrary
         /// <typeparam name="TKey">Тип ключа сортировки.</typeparam>
         public void SortSpaceObjects<TKey>(Func<SpaceObject, TKey> keySelector, bool ascending)
         {
-            _spaceObjects.Sort((x, y) => Comparer<TKey>.Default.Compare(keySelector(y), keySelector(x)));
+            if (ascending)
+            {
+                _spaceObjects.Sort((x, y) => Comparer<TKey>.Default.Compare(keySelector(x), keySelector(y)));
+            }
+            else
+            {
+                _spaceObjects.Sort((x, y) => Comparer<TKey>.Default.Compare(keySelector(y), keySelector(x)));
+            }
         }
     }
 }
