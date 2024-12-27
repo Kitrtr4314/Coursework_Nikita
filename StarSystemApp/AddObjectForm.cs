@@ -31,14 +31,14 @@ namespace StarSystemApp
             try
             {
                 // Общие свойства
-                var mass = double.Parse(txtMass.Text);
-                var diameter = double.Parse(txtDiameter.Text);
-                var age = double.Parse(txtAge.Text);
+                var mass = float.Parse(txtMass.Text);
+                var diameter = float.Parse(txtDiameter.Text);
+                var age = int.Parse(txtAge.Text);
 
                 if (rbStar.Checked)
                 {
                     // Создание звезды
-                    var luminosity = (double)nudLuminosity.Value;
+                    var luminosity = (float)nudLuminosity.Value;
                     CreatedObject = new Star
                     {
                         Mass = mass,
@@ -56,7 +56,7 @@ namespace StarSystemApp
                         Mass = mass,
                         EquatorialDiameter = diameter,
                         Age = age,
-                        MoonCount = moonCount
+                        MoonsCount = moonCount
                     };
                 }
                 else if (rbMoon.Checked)
