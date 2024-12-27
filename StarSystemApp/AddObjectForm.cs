@@ -77,11 +77,13 @@ namespace StarSystemApp
                 else if (rbMoon.Checked)
                 {
                     // Создание луны
+                    var planetName = (string)txtPlanetName.Text;
                     CreatedObject = new Moon
                     {
                         Mass = mass,
                         EquatorialDiameter = diameter,
-                        Age = age
+                        Age = age,
+                        PlanetName = planetName
                     };
                 }
                 else
