@@ -62,28 +62,18 @@ namespace StarSystemApp
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            // Пример диалогового окна для выбора параметра сортировки
-            var sortDialog = new SortDialog();
-            if (sortDialog.ShowDialog() == DialogResult.OK)
+            using (var sortDialog = new SortDialog())
             {
-                switch (sortDialog.SelectedCriteria)
+                if (sortDialog.ShowDialog() == DialogResult.OK)
                 {
-                    case "Масса":
-                        starSystem.SortSpaceObjects(obj => obj.Mass);
-                        break;
-                    case "Диаметр":
-                        starSystem.SortSpaceObjects(obj => obj.EquatorialDiameter);
-                        break;
-                    case "Возраст":
-                        starSystem.SortSpaceObjects(obj => obj.Age);
-                        break;
-                    default:
-                        MessageBox.Show("Неверный критерий сортировки.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                    var sortCriteria = sortDialog.SelectedSortCriteria;
+                    if (sortCriteria != null)
+                    {
+                        starSystem.SortSpaceObjects(sortCriteria);
+                        UpdateObjectList();
+                        ObjectLabel.Text = "Система отсортирована.";
+                    }
                 }
-
-                UpdateObjectList();
-                ObjectLabel.Text = $"Отсортировано по {sortDialog.SelectedCriteria}!";
             }
         }
 
