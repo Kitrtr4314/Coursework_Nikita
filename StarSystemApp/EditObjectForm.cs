@@ -1,155 +1,198 @@
-using System;
-using System.Windows.Forms;
-using StarSystemLibrary;
+using System.ComponentModel;
 
 namespace StarSystemApp
 {
-    public partial class EditObjectForm : Form
+    partial class EditObjectForm
     {
-        public SpaceObject EditedObject { get; private set; }
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private IContainer components = null;
 
-        public EditObjectForm(SpaceObject existingObject)
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            InitializeComponent();
-            EditedObject = existingObject;
-            FillFormFields();
-            ToggleInputs();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+
+            base.Dispose(disposing);
         }
 
-        private void FillFormFields()
-        {
-            // Заполнение полей данными существующего объекта
-            txtName.Text = EditedObject.Name;
-            txtMass.Text = EditedObject.Mass.ToString();
-            txtDiameter.Text = EditedObject.EquatorialDiameter.ToString();
-            txtAge.Text = EditedObject.Age.ToString();
+        #region Windows Form Designer generated code
 
-            // В зависимости от типа объекта, включаем нужные поля
-            if (EditedObject is Star star)
-            {
-                rbStar.Checked = true;
-                nudLuminosity.Value = (decimal)star.Luminosity;
-            }
-            else if (EditedObject is Planet planet)
-            {
-                rbPlanet.Checked = true;
-                nudMoonsCount.Value = planet.MoonsCount;
-            }
-            else if (EditedObject is Moon moon)
-            {
-                rbMoon.Checked = true;
-                txtPlanetName.Text = moon.PlanetName;
-            }
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtMass = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtDiameter = new System.Windows.Forms.TextBox();
+            this.txtPlanetName = new System.Windows.Forms.TextBox();
+            this.nudLuminosity = new System.Windows.Forms.NumericUpDown();
+            this.nudMoonsCount = new System.Windows.Forms.NumericUpDown();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.TxtLum = new System.Windows.Forms.TextBox();
+            this.txtMoons = new System.Windows.Forms.TextBox();
+            this.txtPlanet = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLuminosity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMoonsCount)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(12, 20);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(131, 17);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Название объекта:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(149, 20);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(220, 22);
+            this.txtName.TabIndex = 1;
+            // 
+            // txtMass
+            // 
+            this.txtMass.Location = new System.Drawing.Point(149, 70);
+            this.txtMass.Name = "txtMass";
+            this.txtMass.Size = new System.Drawing.Size(220, 22);
+            this.txtMass.TabIndex = 2;
+            this.txtMass.Text = "Масса:";
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(149, 170);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(220, 22);
+            this.txtAge.TabIndex = 3;
+            this.txtAge.Text = "Возраст:";
+            // 
+            // txtDiameter
+            // 
+            this.txtDiameter.Location = new System.Drawing.Point(149, 120);
+            this.txtDiameter.Name = "txtDiameter";
+            this.txtDiameter.Size = new System.Drawing.Size(220, 22);
+            this.txtDiameter.TabIndex = 4;
+            this.txtDiameter.Text = "Диаметр:";
+            // 
+            // txtPlanetName
+            // 
+            this.txtPlanetName.Location = new System.Drawing.Point(149, 320);
+            this.txtPlanetName.Name = "txtPlanetName";
+            this.txtPlanetName.Size = new System.Drawing.Size(220, 22);
+            this.txtPlanetName.TabIndex = 7;
+            // 
+            // nudLuminosity
+            // 
+            this.nudLuminosity.Location = new System.Drawing.Point(149, 220);
+            this.nudLuminosity.Name = "nudLuminosity";
+            this.nudLuminosity.Size = new System.Drawing.Size(120, 22);
+            this.nudLuminosity.TabIndex = 5;
+            // 
+            // nudMoonsCount
+            // 
+            this.nudMoonsCount.Location = new System.Drawing.Point(149, 270);
+            this.nudMoonsCount.Name = "nudMoonsCount";
+            this.nudMoonsCount.Size = new System.Drawing.Size(120, 22);
+            this.nudMoonsCount.TabIndex = 6;
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(15, 370);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(100, 30);
+            this.btnOk.TabIndex = 8;
+            this.btnOk.Text = "Сохранить";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(269, 370);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 30);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Отмена";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // TxtLum
+            // 
+            this.TxtLum.Location = new System.Drawing.Point(15, 220);
+            this.TxtLum.Name = "TxtLum";
+            this.TxtLum.Size = new System.Drawing.Size(120, 22);
+            this.TxtLum.TabIndex = 10;
+            this.TxtLum.Text = "Светимость:";
+            // 
+            // txtMoons
+            // 
+            this.txtMoons.Location = new System.Drawing.Point(15, 270);
+            this.txtMoons.Name = "txtMoons";
+            this.txtMoons.Size = new System.Drawing.Size(120, 22);
+            this.txtMoons.TabIndex = 11;
+            this.txtMoons.Text = "Количество лун:";
+            // 
+            // txtPlanet
+            // 
+            this.txtPlanet.Location = new System.Drawing.Point(15, 320);
+            this.txtPlanet.Name = "txtPlanet";
+            this.txtPlanet.Size = new System.Drawing.Size(120, 22);
+            this.txtPlanet.TabIndex = 12;
+            this.txtPlanet.Text = "Планета:";
+            // 
+            // EditObjectForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(398, 418);
+            this.Controls.Add(this.txtPlanet);
+            this.Controls.Add(this.txtMoons);
+            this.Controls.Add(this.TxtLum);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.nudMoonsCount);
+            this.Controls.Add(this.nudLuminosity);
+            this.Controls.Add(this.txtPlanetName);
+            this.Controls.Add(this.txtDiameter);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtMass);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
+            this.Name = "EditObjectForm";
+            this.Text = "Редактировать объект";
+            ((System.ComponentModel.ISupportInitialize)(this.nudLuminosity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMoonsCount)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
-        private void ToggleInputs()
-        {
-            // Блокируем или разблокируем поля в зависимости от типа объекта
-            if (rbStar.Checked)
-            {
-                nudLuminosity.Enabled = true;
-                nudMoonsCount.Enabled = false;
-                txtPlanetName.Enabled = false;
-            }
-            else if (rbPlanet.Checked)
-            {
-                nudLuminosity.Enabled = false;
-                nudMoonsCount.Enabled = true;
-                txtPlanetName.Enabled = false;
-            }
-            else if (rbMoon.Checked)
-            {
-                nudLuminosity.Enabled = false;
-                nudMoonsCount.Enabled = false;
-                txtPlanetName.Enabled = true;
-            }
-        }
+        #endregion
 
-        private void btnOk_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Проверка на валидность массы, диаметра и возраста
-                if (!float.TryParse(txtMass.Text, out var mass) || mass <= 0)
-                {
-                    MessageBox.Show("Масса должна быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (!float.TryParse(txtDiameter.Text, out var diameter) || diameter <= 0)
-                {
-                    MessageBox.Show("Диаметр должен быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (!int.TryParse(txtAge.Text, out var age) || age <= 0)
-                {
-                    MessageBox.Show("Возраст должен быть числом больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                string name = txtName.Text;
-
-                if (rbStar.Checked)
-                {
-                    var luminosity = (float)nudLuminosity.Value;
-                    EditedObject = new Star
-                    {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        Luminosity = luminosity,
-                        Name = name
-                    };
-                }
-                else if (rbPlanet.Checked)
-                {
-                    var moonCount = (int)nudMoonsCount.Value;
-                    EditedObject = new Planet
-                    {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        MoonsCount = moonCount,
-                        Name = name
-                    };
-                }
-                else if (rbMoon.Checked)
-                {
-                    var planetName = txtPlanetName.Text;
-                    EditedObject = new Moon
-                    {
-                        Mass = mass,
-                        EquatorialDiameter = diameter,
-                        Age = age,
-                        PlanetName = planetName,
-                        Name = name
-                    };
-                }
-                else
-                {
-                    MessageBox.Show("Выберите тип объекта.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                DialogResult = DialogResult.OK;
-                Close();
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Пожалуйста, введите корректные значения во все поля.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            Close();
-        }
-
-        private void RadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            ToggleInputs();
-        }
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtMass;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtDiameter;
+        private System.Windows.Forms.TextBox txtPlanetName;
+        private System.Windows.Forms.NumericUpDown nudLuminosity;
+        private System.Windows.Forms.NumericUpDown nudMoonsCount;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox TxtLum;
+        private System.Windows.Forms.TextBox txtMoons;
+        private System.Windows.Forms.TextBox txtPlanet;
     }
 }
