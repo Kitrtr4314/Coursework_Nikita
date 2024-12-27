@@ -88,7 +88,11 @@ namespace StarSystemApp
         {
             if (ListBoxObject.SelectedItem is SpaceObject selectedObject)
             {
-                ObjectLabel.Text = $"Выбран объект: {selectedObject.Name}";
+                ObjectLabel.Text = $"Выбран объект: {selectedObject.GetType().Name}";
+            }
+            else
+            {
+                ObjectLabel.Text = "Выберите объект из списка.";
             }
         }
     }
