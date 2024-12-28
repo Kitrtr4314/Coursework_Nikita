@@ -79,14 +79,16 @@
       </ProjectReference>
     </ItemGroup>
     <ItemGroup>
-      <Content Include="screens\Снимок экрана 2024-12-26 164933.png" />
-      <Content Include="screens\Снимок экрана 2024-12-27 210054.png" />
-      <Content Include="screens\Снимок экрана 2024-12-27 210144.png" />
-      <Content Include="screens\Снимок экрана 2024-12-27 210157.png" />
-      <Content Include="screens\Снимок экрана 2024-12-27 210321.png" />
-      <Content Include="screens\Снимок экрана 2024-12-27 210446.png" />
-      <Content Include="screens\Снимок экрана 2024-12-27 211215.png" />
-      <Content Include="screens\Снимок экрана 2024-12-28 094913.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 100352.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 100545.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 100753.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 100910.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 100927.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 100945.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 101001.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 101017.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 101046.png" />
+      <Content Include="screens\Снимок экрана 2024-12-28 101054.png" />
       <Content Include="to_do.txt" />
     </ItemGroup>
     <ItemGroup>
